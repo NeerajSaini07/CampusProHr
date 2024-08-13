@@ -1,0 +1,100 @@
+class DayClosingDataModel {
+  double? cLOSEINGAMOUNT;
+  String? lASTCLOSEINGDATE;
+  double? bYCHEQUE;
+  double? bYCASH;
+  double? bYONLINE;
+  double? sWIPEMACHINE;
+  double? bYPAYTM;
+  double? oTHERFEE;
+  double? tENTATIVEFEE;
+  double? pOCKETMONEYDIPOSITCASH;
+  double? pOCKETMONEYWITHDRAWCASH;
+  double? pROSSELLAMOUNT;
+  double? pAYMENTBYCASH;
+  double? bANKDEPOSIT;
+  double? rECEIVEAMOUNT;
+  double? pAYMENTBYCHEQUE;
+  double? cLASSWISESPECIALFEECOLLECTION;
+  double? pOCKETMONEYDEPOSITCHEQUE;
+  double? pOCKETMONEYDEPOSITONLINE;
+  double? pOCKETMONEYDEPOSITSM;
+  double? oTHERFEEExceptCash;
+  double? tENTITIVEFEEExceptCash;
+
+  DayClosingDataModel(
+      {this.cLOSEINGAMOUNT,
+      this.lASTCLOSEINGDATE,
+      this.bYCHEQUE,
+      this.bYCASH,
+      this.bYONLINE,
+      this.sWIPEMACHINE,
+      this.bYPAYTM,
+      this.oTHERFEE,
+      this.tENTATIVEFEE,
+      this.pOCKETMONEYDIPOSITCASH,
+      this.pOCKETMONEYWITHDRAWCASH,
+      this.pROSSELLAMOUNT,
+      this.pAYMENTBYCASH,
+      this.bANKDEPOSIT,
+      this.rECEIVEAMOUNT,
+      this.pAYMENTBYCHEQUE,
+      this.cLASSWISESPECIALFEECOLLECTION,
+      this.pOCKETMONEYDEPOSITCHEQUE,
+      this.pOCKETMONEYDEPOSITONLINE,
+      this.pOCKETMONEYDEPOSITSM,
+      this.oTHERFEEExceptCash,
+      this.tENTITIVEFEEExceptCash});
+
+  DayClosingDataModel.fromJson(Map<String, dynamic> json) {
+    cLOSEINGAMOUNT = json['CLOSEINGAMOUNT'];
+    lASTCLOSEINGDATE = json['LASTCLOSEINGDATE'];
+    bYCHEQUE = json['BYCHEQUE'];
+    bYCASH = json['BYCASH'];
+    bYONLINE = json['BYONLINE'];
+    sWIPEMACHINE = json['SWIPEMACHINE'];
+    bYPAYTM = json['BYPAYTM'];
+    oTHERFEE = json['OTHERFEE'];
+    tENTATIVEFEE = json['TENTATIVEFEE'];
+    pOCKETMONEYDIPOSITCASH = json['POCKETMONEYDIPOSIT_CASH'];
+    pOCKETMONEYWITHDRAWCASH = json['POCKETMONEYWITHDRAW_CASH'];
+    pROSSELLAMOUNT = json['PROSSELLAMOUNT'];
+    pAYMENTBYCASH = json['PAYMENTBYCASH'];
+    bANKDEPOSIT = json['BANKDEPOSIT'];
+    rECEIVEAMOUNT = json['RECEIVEAMOUNT'];
+    pAYMENTBYCHEQUE = json['PAYMENTBYCHEQUE'];
+    cLASSWISESPECIALFEECOLLECTION = json['CLASSWISESPECIALFEECOLLECTION'];
+    pOCKETMONEYDEPOSITCHEQUE = json['POCKETMONEYDEPOSIT_CHEQUE'];
+    pOCKETMONEYDEPOSITONLINE = json['POCKETMONEYDEPOSIT_ONLINE'];
+    pOCKETMONEYDEPOSITSM = json['POCKETMONEYDEPOSIT_SM'];
+    oTHERFEEExceptCash = json['OTHERFEE_ExceptCash'];
+    tENTITIVEFEEExceptCash = json['TENTITIVEFEE_ExceptCash'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['CLOSEINGAMOUNT'] = this.cLOSEINGAMOUNT;
+    data['LASTCLOSEINGDATE'] = this.lASTCLOSEINGDATE;
+    data['BYCHEQUE'] = this.bYCHEQUE;
+    data['BYCASH'] = this.bYCASH;
+    data['BYONLINE'] = this.bYONLINE;
+    data['SWIPEMACHINE'] = this.sWIPEMACHINE;
+    data['BYPAYTM'] = this.bYPAYTM;
+    data['OTHERFEE'] = this.oTHERFEE;
+    data['TENTATIVEFEE'] = this.tENTATIVEFEE;
+    data['POCKETMONEYDIPOSIT_CASH'] = this.pOCKETMONEYDIPOSITCASH;
+    data['POCKETMONEYWITHDRAW_CASH'] = this.pOCKETMONEYWITHDRAWCASH;
+    data['PROSSELLAMOUNT'] = this.pROSSELLAMOUNT;
+    data['PAYMENTBYCASH'] = this.pAYMENTBYCASH;
+    data['BANKDEPOSIT'] = this.bANKDEPOSIT;
+    data['RECEIVEAMOUNT'] = this.rECEIVEAMOUNT;
+    data['PAYMENTBYCHEQUE'] = this.pAYMENTBYCHEQUE;
+    data['CLASSWISESPECIALFEECOLLECTION'] = this.cLASSWISESPECIALFEECOLLECTION;
+    data['POCKETMONEYDEPOSIT_CHEQUE'] = this.pOCKETMONEYDEPOSITCHEQUE;
+    data['POCKETMONEYDEPOSIT_ONLINE'] = this.pOCKETMONEYDEPOSITONLINE;
+    data['POCKETMONEYDEPOSIT_SM'] = this.pOCKETMONEYDEPOSITSM;
+    data['OTHERFEE_ExceptCash'] = this.oTHERFEEExceptCash;
+    data['TENTITIVEFEE_ExceptCash'] = this.tENTITIVEFEEExceptCash;
+    return data;
+  }
+}
