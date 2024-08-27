@@ -4,10 +4,10 @@ import 'package:campus_pro/src/DATA/userUtils.dart';
 class ApiEndpoints {
   ApiEndpoints._();
 
-  // static const baseUrl = "https://mobileweb.rugerp.com/api/";
+  static const baseUrl = "https://mobileweb.rugerp.com/api/";
   // static const baseUrl = "https://appdev.rugerp.com/api/";
 
-  static const baseUrl = "https://mobiledevweb.rugerp.com/api/";
+  // static const baseUrl = "https://mobiledevweb.rugerp.com/api/";
 
   static const saveFcmToken = baseUrl + "UpdateLastActive_fcmtokenwebnew";
 

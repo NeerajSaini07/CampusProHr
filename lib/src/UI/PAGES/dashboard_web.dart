@@ -601,11 +601,10 @@ class _DashboardWebState extends State<DashboardWeb> {
                       onCloseWindow: (controller) {},
                       onLoadStart:
                           (InAppWebViewController controller, Uri? url) async {
-                        log("----------${url.toString()}--------------");
+                        // log("----------${url.toString()}--------------");
                         if (url != null &&
                             url.toString().contains(
                                 "https://appdev.rugerp.com/Login/LoginAccounts")) {
-                          // _goBack();
                           Navigator.pushNamedAndRemoveUntil(context,
                               AccountTypeScreen.routeName, (route) => false);
                         }
