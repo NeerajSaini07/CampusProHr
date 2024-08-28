@@ -6,7 +6,6 @@ import 'package:campus_pro/src/DATA/MODELS/models.dart';
 import 'package:campus_pro/src/DATA/REPOSITORIES/header_token_repository.dart';
 import 'package:campus_pro/src/DATA/userUtils.dart';
 import 'package:campus_pro/src/UI/PAGES/dashboard_web.dart';
-import 'package:campus_pro/src/UI/PAGES/restrictionPage.dart';
 import 'package:campus_pro/src/UI/PAGES/log_in_screen.dart';
 import 'package:campus_pro/src/UI/WIDGETS/commonSnackbar.dart';
 import 'package:campus_pro/src/globalBlocProvidersFile.dart';
@@ -47,24 +46,24 @@ class _AccountTypeScreenState extends State<AccountTypeScreen> {
             listener: (ctx, state) {
               if (state is CheckAppRestrictionLoadSuccess) {
                 if (state.status) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return BlocProvider<AppConfigSettingCubit>(
-                          create: (_) => AppConfigSettingCubit(
-                            (AppConfigSettingRepository(AppConfigSettingApi())),
-                          ),
-                          child: BlocProvider<RestrictionPageCubit>(
-                            create: (_) => RestrictionPageCubit(
-                              RestrictionPageRepository(RestrictionPageApi()),
-                            ),
-                            child: RestrictionPage(),
-                          ),
-                        );
-                      },
-                    ),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) {
+                  //       return BlocProvider<AppConfigSettingCubit>(
+                  //         create: (_) => AppConfigSettingCubit(
+                  //           (AppConfigSettingRepository(AppConfigSettingApi())),
+                  //         ),
+                  //         child: BlocProvider<RestrictionPageCubit>(
+                  //           create: (_) => RestrictionPageCubit(
+                  //             RestrictionPageRepository(RestrictionPageApi()),
+                  //           ),
+                  //           child: RestrictionPage(),
+                  //         ),
+                  //       );
+                  //     },
+                  //   ),
+                  // );
                 } else {
                   navigateToDashboard(ctx);
                 }

@@ -19,9 +19,6 @@ import 'package:campus_pro/src/UI/PAGES/EMPLOYEE_MODULE/WEEK_PLAN_EMPLOYEE/updat
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/MEETING/meetingStatus.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/activity.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/notifications.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/MY_ACCOUNT_STUDENT/changePasswordStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/MY_ACCOUNT_STUDENT/profileStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/attendanceStudent.dart';
 import 'package:campus_pro/src/UI/WIDGETS/commonSnackbar.dart';
 import 'package:campus_pro/src/UI/WIDGETS/noRecordFound.dart';
 import 'package:campus_pro/src/UI/WIDGETS/toast.dart';
@@ -660,7 +657,7 @@ class _DashboardEmployeeState extends State<DashboardEmployee> {
                 create: (_) => ChangePasswordStudentCubit(
                     ChangePasswordStudentRepository(
                         ChangePasswordStudentApi())),
-                child: ChangePasswordStudent(),
+                // child: ChangePasswordStudent(),
               );
             }));
             // return Navigator.pushNamed(
@@ -695,7 +692,7 @@ class _DashboardEmployeeState extends State<DashboardEmployee> {
                   child: BlocProvider<ApplyForLeaveCubit>(
                     create: (_) => ApplyForLeaveCubit(
                         ApplyForLeaveRepository(ApplyForLeaveApi())),
-                    child: AttendanceStudent(),
+                    // child: AttendanceStudent(),
                   ),
                 ),
               );
@@ -1892,8 +1889,9 @@ class _DashboardEmployeeState extends State<DashboardEmployee> {
                     Positioned(
                       right: 0,
                       child: InkWell(
-                        onTap: () => Navigator.pushNamed(
-                            context, ProfileStudent.routeName),
+                        onTap: () {},
+                        // onTap: () => Navigator.pushNamed(
+                        //     context, ProfileStudent.routeName),
                         child: Stack(
                           alignment: Alignment.bottomCenter,
                           children: [

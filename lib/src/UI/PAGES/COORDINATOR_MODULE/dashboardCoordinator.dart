@@ -17,7 +17,6 @@ import 'package:campus_pro/src/UI/PAGES/EMPLOYEE_MODULE/WEEK_PLAN_EMPLOYEE/updat
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/MEETING/meetingStatus.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/activity.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/notifications.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/MY_ACCOUNT_STUDENT/profileStudent.dart';
 import 'package:campus_pro/src/UI/WIDGETS/commonSnackbar.dart';
 import 'package:campus_pro/src/UI/WIDGETS/updateEmail.dart';
 import 'package:campus_pro/src/UTILS/appImages.dart';
@@ -29,7 +28,6 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shimmer/shimmer.dart';
-
 
 import '../../../globalBlocProvidersFile.dart';
 
@@ -334,17 +332,18 @@ class _DashboardCoordinatorState extends State<DashboardCoordinator> {
             }
           });
           if (flag.toLowerCase() == "f") {
-          return Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return BlocProvider<CircularEmployeeCubit>(
-            create: (_) => CircularEmployeeCubit(
-                CircularEmployeeRepository(CircularEmployeeApi())),
-            child: BlocProvider<DeleteCircularCubit>(
-              create: (_) => DeleteCircularCubit(
-                  DeleteCircularRepository(DeleteCircularApi())),
-              child: CircularEmployee(),
-            ),
-          );
-        }));
+            return Navigator.push(context,
+                MaterialPageRoute(builder: (context) {
+              return BlocProvider<CircularEmployeeCubit>(
+                create: (_) => CircularEmployeeCubit(
+                    CircularEmployeeRepository(CircularEmployeeApi())),
+                child: BlocProvider<DeleteCircularCubit>(
+                  create: (_) => DeleteCircularCubit(
+                      DeleteCircularRepository(DeleteCircularApi())),
+                  child: CircularEmployee(),
+                ),
+              );
+            }));
             // return Navigator.pushNamed(context, CircularEmployee.routeName);
           } else {
             print(url);
@@ -392,53 +391,61 @@ class _DashboardCoordinatorState extends State<DashboardCoordinator> {
             }
           });
           if (flag.toLowerCase() == "f") {
-             return Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return BlocProvider<LoadClassForSmsCubit>(
-            create: (_) => LoadClassForSmsCubit(
-                LoadClassForSmsRepository(LoadClassForSmsApi())),
-            child: BlocProvider<GetSelectClassTeacherCubit>(
-              create: (_) => GetSelectClassTeacherCubit(
-                  GetSelectClassTeacherRepository(GetSelectClassTeacherApi())),
-              child: BlocProvider<AssignPeriodAdminCubit>(
-                create: (_) => AssignPeriodAdminCubit(
-                    AssignPeriodAdminRepository(AssignPeriodAdminApi())),
-                child: BlocProvider<MarkAttendancePeriodsEmployeeCubit>(
-                  create: (_) => MarkAttendancePeriodsEmployeeCubit(
-                      MarkAttendancePeriodsEmployeeRepository(
-                          MarkAttendancePeriodsEmployeeApi())),
-                  child: BlocProvider<RemoveAllottedSubjectCubit>(
-                    create: (_) => RemoveAllottedSubjectCubit(
-                        RemoveAllottedSubjectsRepository(
-                            RemoveAllottedSubjectsApi())),
-                    child: BlocProvider<LoadAllottedSubjectCubit>(
-                      create: (_) => LoadAllottedSubjectCubit(
-                          LoadAllottedSubjectsRepository(
-                              LoadAllottedSubjectsApi())),
-                      child: BlocProvider<SubjectAlloteToTeacherCubit>(
-                        create: (_) => SubjectAlloteToTeacherCubit(
-                            SubjectAlloteToTeacherRepository(
-                                SubjectAlloteToTeacherApi())),
-                        child: BlocProvider<GetClassSectionAdminCubit>(
-                          create: (_) => GetClassSectionAdminCubit(
-                              GetClassSectionAdminRepository(
-                                  GetClassSectionAdminApi())),
-                          child: BlocProvider<GetClasswiseSubjectAdminCubit>(
-                            create: (_) => GetClasswiseSubjectAdminCubit(
-                                GetClasswiseSubjectAdminRepository(
-                                    GetClasswiseSubjectAdminApi())),
-                            child: BlocProvider<LoadClassForSubjectAdminCubit>(
-                              create: (_) => LoadClassForSubjectAdminCubit(
-                                  LoadClassForSubjectAdminRepository(
-                                      LoadClassForSubjectAdminApi())),
-                              child: BlocProvider<AssignClassTeacherAdminCubit>(
-                                create: (_) => AssignClassTeacherAdminCubit(
-                                    AssignClassTeacherAdminRepository(
-                                        AssignClassTeacherAdminApi())),
-                                child: BlocProvider<EmployeeInfoForSearchCubit>(
-                                  create: (_) => EmployeeInfoForSearchCubit(
-                                      EmployeeInfoForSearchRepository(
-                                          EmployeeInfoForSearchApi())),
-                                  child: TeacherAssignAdmin(),
+            return Navigator.push(context,
+                MaterialPageRoute(builder: (context) {
+              return BlocProvider<LoadClassForSmsCubit>(
+                create: (_) => LoadClassForSmsCubit(
+                    LoadClassForSmsRepository(LoadClassForSmsApi())),
+                child: BlocProvider<GetSelectClassTeacherCubit>(
+                  create: (_) => GetSelectClassTeacherCubit(
+                      GetSelectClassTeacherRepository(
+                          GetSelectClassTeacherApi())),
+                  child: BlocProvider<AssignPeriodAdminCubit>(
+                    create: (_) => AssignPeriodAdminCubit(
+                        AssignPeriodAdminRepository(AssignPeriodAdminApi())),
+                    child: BlocProvider<MarkAttendancePeriodsEmployeeCubit>(
+                      create: (_) => MarkAttendancePeriodsEmployeeCubit(
+                          MarkAttendancePeriodsEmployeeRepository(
+                              MarkAttendancePeriodsEmployeeApi())),
+                      child: BlocProvider<RemoveAllottedSubjectCubit>(
+                        create: (_) => RemoveAllottedSubjectCubit(
+                            RemoveAllottedSubjectsRepository(
+                                RemoveAllottedSubjectsApi())),
+                        child: BlocProvider<LoadAllottedSubjectCubit>(
+                          create: (_) => LoadAllottedSubjectCubit(
+                              LoadAllottedSubjectsRepository(
+                                  LoadAllottedSubjectsApi())),
+                          child: BlocProvider<SubjectAlloteToTeacherCubit>(
+                            create: (_) => SubjectAlloteToTeacherCubit(
+                                SubjectAlloteToTeacherRepository(
+                                    SubjectAlloteToTeacherApi())),
+                            child: BlocProvider<GetClassSectionAdminCubit>(
+                              create: (_) => GetClassSectionAdminCubit(
+                                  GetClassSectionAdminRepository(
+                                      GetClassSectionAdminApi())),
+                              child:
+                                  BlocProvider<GetClasswiseSubjectAdminCubit>(
+                                create: (_) => GetClasswiseSubjectAdminCubit(
+                                    GetClasswiseSubjectAdminRepository(
+                                        GetClasswiseSubjectAdminApi())),
+                                child:
+                                    BlocProvider<LoadClassForSubjectAdminCubit>(
+                                  create: (_) => LoadClassForSubjectAdminCubit(
+                                      LoadClassForSubjectAdminRepository(
+                                          LoadClassForSubjectAdminApi())),
+                                  child: BlocProvider<
+                                      AssignClassTeacherAdminCubit>(
+                                    create: (_) => AssignClassTeacherAdminCubit(
+                                        AssignClassTeacherAdminRepository(
+                                            AssignClassTeacherAdminApi())),
+                                    child: BlocProvider<
+                                        EmployeeInfoForSearchCubit>(
+                                      create: (_) => EmployeeInfoForSearchCubit(
+                                          EmployeeInfoForSearchRepository(
+                                              EmployeeInfoForSearchApi())),
+                                      child: TeacherAssignAdmin(),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
@@ -448,10 +455,8 @@ class _DashboardCoordinatorState extends State<DashboardCoordinator> {
                     ),
                   ),
                 ),
-              ),
-            ),
-          );
-        }));
+              );
+            }));
             // return Navigator.pushNamed(context, TeacherAssignAdmin.routeName);
           } else {
             print(url);
@@ -471,12 +476,12 @@ class _DashboardCoordinatorState extends State<DashboardCoordinator> {
             }
           });
           if (flag.toLowerCase() == "f") {
-             return Navigator.push(context,
+            return Navigator.push(context,
                 MaterialPageRoute(builder: (context) {
-              return  BlocProvider<AttendanceOfEmployeeAdminCubit>(
-           create: (_) => AttendanceOfEmployeeAdminCubit(
-               AttendanceOfEmployeeAdminRepository(
-                   AttendanceOfEmployeeAdminApi())),
+              return BlocProvider<AttendanceOfEmployeeAdminCubit>(
+                create: (_) => AttendanceOfEmployeeAdminCubit(
+                    AttendanceOfEmployeeAdminRepository(
+                        AttendanceOfEmployeeAdminApi())),
                 child: BlocProvider<AttendanceEmployeeCubit>(
                   create: (_) => AttendanceEmployeeCubit(
                       AttendanceEmployeeRepository(AttendanceEmployeeApi())),
@@ -533,47 +538,48 @@ class _DashboardCoordinatorState extends State<DashboardCoordinator> {
             }
           });
           if (flag.toLowerCase() == "f") {
-             return Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return BlocProvider<FillPeriodAttendanceCubit>(
-            create: (_) => FillPeriodAttendanceCubit(
-                FillPeriodAttendanceRepository(FillPeriodAttendanceApi())),
-            child: BlocProvider<MarkAttendanceSaveAttendanceEmployeeCubit>(
-              create: (_) => MarkAttendanceSaveAttendanceEmployeeCubit(
-                  MarkAttendanceSaveAttendanceEmployeeRepository(
-                      MarkAttendanceSaveAttendanceEmployeeApi())),
-              child: BlocProvider<MarkAttendancePeriodsEmployeeCubit>(
-                create: (_) => MarkAttendancePeriodsEmployeeCubit(
-                    MarkAttendancePeriodsEmployeeRepository(
-                        MarkAttendancePeriodsEmployeeApi())),
-                child: BlocProvider<MeetingRecipientListAdminCubit>(
-                  create: (_) => MeetingRecipientListAdminCubit(
-                      MeetingRecipientListAdminRepository(
-                          MeetingRecipientListAdminApi())),
-                  child: BlocProvider<ResultAnnounceClassCubit>(
-                    create: (_) => ResultAnnounceClassCubit(
-                        ResultAnnounceClassRepository(
-                            ResultAnnounceClassApi())),
-                    child: BlocProvider<MeetingDetailsAdminCubit>(
-                      create: (_) => MeetingDetailsAdminCubit(
-                          (MeetingDetailsAdminRepository(
-                              MeetingDetailsAdminApi()))),
-                      child: BlocProvider<WeekPlanSubjectListCubit>(
-                        create: (_) => WeekPlanSubjectListCubit(
-                            WeekPlanSubjectListRepository(
-                                WeekPlanSubjectListApi())),
-                        child: BlocProvider<TeachersListCubit>(
-                          create: (_) => TeachersListCubit(
-                              TeachersListRepository(TeachersListApi())),
-                          child: MeetingStatus(),
+            return Navigator.push(context,
+                MaterialPageRoute(builder: (context) {
+              return BlocProvider<FillPeriodAttendanceCubit>(
+                create: (_) => FillPeriodAttendanceCubit(
+                    FillPeriodAttendanceRepository(FillPeriodAttendanceApi())),
+                child: BlocProvider<MarkAttendanceSaveAttendanceEmployeeCubit>(
+                  create: (_) => MarkAttendanceSaveAttendanceEmployeeCubit(
+                      MarkAttendanceSaveAttendanceEmployeeRepository(
+                          MarkAttendanceSaveAttendanceEmployeeApi())),
+                  child: BlocProvider<MarkAttendancePeriodsEmployeeCubit>(
+                    create: (_) => MarkAttendancePeriodsEmployeeCubit(
+                        MarkAttendancePeriodsEmployeeRepository(
+                            MarkAttendancePeriodsEmployeeApi())),
+                    child: BlocProvider<MeetingRecipientListAdminCubit>(
+                      create: (_) => MeetingRecipientListAdminCubit(
+                          MeetingRecipientListAdminRepository(
+                              MeetingRecipientListAdminApi())),
+                      child: BlocProvider<ResultAnnounceClassCubit>(
+                        create: (_) => ResultAnnounceClassCubit(
+                            ResultAnnounceClassRepository(
+                                ResultAnnounceClassApi())),
+                        child: BlocProvider<MeetingDetailsAdminCubit>(
+                          create: (_) => MeetingDetailsAdminCubit(
+                              (MeetingDetailsAdminRepository(
+                                  MeetingDetailsAdminApi()))),
+                          child: BlocProvider<WeekPlanSubjectListCubit>(
+                            create: (_) => WeekPlanSubjectListCubit(
+                                WeekPlanSubjectListRepository(
+                                    WeekPlanSubjectListApi())),
+                            child: BlocProvider<TeachersListCubit>(
+                              create: (_) => TeachersListCubit(
+                                  TeachersListRepository(TeachersListApi())),
+                              child: MeetingStatus(),
+                            ),
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ),
-          );
-        }));
+              );
+            }));
             // return Navigator.pushNamed(context, MeetingStatus.routeName);
           } else {
             print(url);
@@ -1369,8 +1375,9 @@ class _DashboardCoordinatorState extends State<DashboardCoordinator> {
                     Positioned(
                       right: 0,
                       child: InkWell(
-                        onTap: () => Navigator.pushNamed(
-                            context, ProfileStudent.routeName),
+                        onTap: () {},
+                        // onTap: () => Navigator.pushNamed(
+                        //     context, ProfileStudent.routeName),
                         child: Stack(
                           alignment: Alignment.bottomCenter,
                           children: [

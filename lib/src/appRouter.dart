@@ -89,30 +89,12 @@ import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/meetingConfigure.dart'
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/SCHOOL_BUS_TRACKING/schoolBusList.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/Task_Management/taskManagement.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/Task_Management/taskManagementDetail.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/COMMUNICATION_STUDENT/circularStudent.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/activity.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/EXAM_STUDENT/onlineTestStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/EXAM_STUDENT/openMarksheet.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/MY_ACCOUNT_STUDENT/profileEditRequestStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/activityStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/attendanceStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/COMMUNICATION_STUDENT/classRoomsStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/EXAM_STUDENT/dateSheetStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/calendarStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/examAnalysisStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/restrictionPage.dart';
 import 'package:campus_pro/src/UI/PAGES/schoolBusLocation.dart';
-import 'package:campus_pro/src/UI/PAGES/dashboard.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/COMMUNICATION_STUDENT/homeWorkStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/EXAM_STUDENT/markSheetStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/payByChequeStudent.dart';
 import 'package:campus_pro/src/UI/PAGES/ADMIN_MODULE/STUDENT_ADMIN/studentRemarkAdmin.dart';
 import 'package:campus_pro/src/UI/PAGES/forgotPassword.dart';
 import 'package:campus_pro/src/UI/PAGES/log_in_screen.dart';
 import 'package:campus_pro/src/UI/PAGES/splashScreen.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/feePaymentStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/EXAM_STUDENT/examTestResultStudent.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/MY_ACCOUNT_STUDENT/profileStudent.dart';
 import 'package:campus_pro/src/UI/PAGES/account_type_screen.dart';
 import 'package:campus_pro/src/UI/WIDGETS/bottomNavigation.dart';
 import 'package:campus_pro/src/UI/WIDGETS/googlePermission.dart';
@@ -122,8 +104,6 @@ import 'package:campus_pro/src/gotoWeb.dart';
 import 'package:flutter/material.dart';
 import 'UI/PAGES/EMPLOYEE_MODULE/COMMUNICATION_EMPLOYEE/SEND_HOMEWORK_EMPLOYEE/createHomeWorkEmployee.dart';
 import 'UI/PAGES/EMPLOYEE_MODULE/LEAVE_EMPLOYEE/studentLeaveEmployeepending.dart';
-import 'UI/PAGES/STUDENT_MODULE/MY_ACCOUNT_STUDENT/changePasswordStudent.dart';
-import 'UI/PAGES/STUDENT_MODULE/feedbackStudent.dart';
 import 'UI/PAGES/STAND_ALONE_PAGES/notifications.dart';
 
 _page(Widget page) {
@@ -142,42 +122,42 @@ class AppRoutes {
         return _page(
           LogInScreen(),
         );
-      case Dashboard.routeName:
-        return _page(
-          Dashboard(userType: args as String),
-        );
-      case FeePaymentStudent.routeName:
-        return _page(
-          FeePaymentStudent(),
-        );
-      case AttendanceStudent.routeName:
-        return _page(
-          AttendanceStudent(),
-        );
-      case PayByChequeStudent.routeName:
-        return _page(
-          PayByChequeStudent(feeData: args as Map<String, String>),
-        );
+      // case Dashboard.routeName:
+      //   return _page(
+      //     Dashboard(userType: args as String),
+      //   );
+      // case FeePaymentStudent.routeName:
+      //   return _page(
+      //     FeePaymentStudent(),
+      //   );
+      // case AttendanceStudent.routeName:
+      //   return _page(
+      //     AttendanceStudent(),
+      //   );
+      // case PayByChequeStudent.routeName:
+      //   return _page(
+      //     PayByChequeStudent(feeData: args as Map<String, String>),
+      //   );
       case AccountTypeScreen.routeName:
         return _page(
           AccountTypeScreen(),
         );
-      case ProfileStudent.routeName:
-        return _page(
-          ProfileStudent(),
-        );
-      case ProfileEditRequest.routeName:
-        return _page(
-          ProfileEditRequest(profileData: args as ProfileStudentModel),
-        );
-      case HomeWorkStudent.routeName:
-        return _page(
-          HomeWorkStudent(),
-        );
-      case ClassRoomsStudent.routeName:
-        return _page(
-          ClassRoomsStudent(),
-        );
+      // case ProfileStudent.routeName:
+      //   return _page(
+      //     ProfileStudent(),
+      //   );
+      // case ProfileEditRequest.routeName:
+      //   return _page(
+      //     ProfileEditRequest(profileData: args as ProfileStudentModel),
+      //   );
+      // case HomeWorkStudent.routeName:
+      //   return _page(
+      //     HomeWorkStudent(),
+      //   );
+      // case ClassRoomsStudent.routeName:
+      //   return _page(
+      //     ClassRoomsStudent(),
+      //   );
       case ClassroomEmployee.routeName:
         return _page(
           ClassroomEmployee(),
@@ -194,30 +174,30 @@ class AppRoutes {
         return _page(
           Notifications(),
         );
-      case ChangePasswordStudent.routeName:
-        return _page(
-          ChangePasswordStudent(),
-        );
-      case FeedbackStudent.routeName:
-        return _page(
-          FeedbackStudent(),
-        );
-      case CircularStudent.routeName:
-        return _page(
-          CircularStudent(),
-        );
-      case DateSheetStudent.routeName:
-        return _page(
-          DateSheetStudent(),
-        );
-      case MarkSheetStudent.routeName:
-        return _page(
-          MarkSheetStudent(userType: args as String),
-        );
-      case OpenMarksheet.routeName:
-        return _page(
-          OpenMarksheet(marksheet: args as MarkSheetStudentModel),
-        );
+      // case ChangePasswordStudent.routeName:
+      //   return _page(
+      //     ChangePasswordStudent(),
+      //   );
+      // case FeedbackStudent.routeName:
+      //   return _page(
+      //     FeedbackStudent(),
+      //   );
+      // case CircularStudent.routeName:
+      //   return _page(
+      //     CircularStudent(),
+      //   );
+      // case DateSheetStudent.routeName:
+      //   return _page(
+      //     DateSheetStudent(),
+      //   );
+      // case MarkSheetStudent.routeName:
+      //   return _page(
+      //     MarkSheetStudent(userType: args as String),
+      //   );
+      // case OpenMarksheet.routeName:
+      //   return _page(
+      //     OpenMarksheet(marksheet: args as MarkSheetStudentModel),
+      //   );
       case StudentRemarkAdmin.routeName:
         return _page(
           StudentRemarkAdmin(),
@@ -250,10 +230,10 @@ class AppRoutes {
         return _page(
           MeetingStatus(),
         );
-      case ExamTestResultStudent.routeName:
-        return _page(
-          ExamTestResultStudent(),
-        );
+      // case ExamTestResultStudent.routeName:
+      //   return _page(
+      //     ExamTestResultStudent(),
+      //   );
       case TaskManagement.routeName:
         return _page(
           TaskManagement(userType: args as String),
@@ -327,22 +307,22 @@ class AppRoutes {
         return _page(
           CceGradeEntry(),
         );
-      case CalendarStudent.routeName:
-        return _page(
-          CalendarStudent(),
-        );
+      // case CalendarStudent.routeName:
+      //   return _page(
+      //     CalendarStudent(),
+      //   );
       case GoToSite.routeName:
         return _page(
           GoToSite(),
         );
-      case OnlineTestStudent.routeName:
-        return _page(
-          OnlineTestStudent(),
-        );
-      case ExamAnalysisStudent.routeName:
-        return _page(
-          ExamAnalysisStudent(),
-        );
+      // case OnlineTestStudent.routeName:
+      //   return _page(
+      //     OnlineTestStudent(),
+      //   );
+      // case ExamAnalysisStudent.routeName:
+      //   return _page(
+      //     ExamAnalysisStudent(),
+      //   );
       case ExamAnalysisAdmin.routeName:
         return _page(
           ExamAnalysisAdmin(),
@@ -568,8 +548,8 @@ class AppRoutes {
       case CustomChatUserListAdmin.routeName:
         return _page(CustomChatUserListAdmin());
 
-      case ActivityStudent.routeName:
-        return _page(ActivityStudent());
+      // case ActivityStudent.routeName:
+      //   return _page(ActivityStudent());
 
       case TeacherClassStatus.routeName:
         return _page(TeacherClassStatus());
@@ -579,13 +559,13 @@ class AppRoutes {
           classDetails: args as List<List>,
         ));
 
-      case RestrictionPage.routeName:
-        return _page(RestrictionPage());
+      // case RestrictionPage.routeName:
+      //   return _page(RestrictionPage());
       case GooglePermission.routeName:
         return _page(GooglePermission());
 
-      case PopUpConfigureAdmin.routeName:
-        return _page(PopUpConfigureAdmin());
+      // case PopUpConfigureAdmin.routeName:
+      //   return _page(PopUpConfigureAdmin());
       // case OpenExcelFile.routeName:
       //   return _page(OpenExcelFile());
 

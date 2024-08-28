@@ -1,4 +1,3 @@
-
 import 'package:campus_pro/src/DATA/MODELS/userSchoolDetailModel.dart';
 import 'package:campus_pro/src/drawerImages.dart';
 import 'package:campus_pro/src/DATA/MODELS/drawerModel.dart';
@@ -228,7 +227,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                               create: (_) => ProfileStudentCubit(
                                   ProfileStudentRepository(
                                       ProfileStudentApi())),
-                              child: ProfileStudent(),
+                              // child: ProfileStudent(),
                             );
                           }));
                         // Navigator.pushNamed(
@@ -461,7 +460,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           if (item.menuFlag == "F") {
             // print("${item.menuFlag!} helloooo Not ");
 
-            onSelected(context, userType: item.userType1, menuId: item.menuID);
+            // onSelected(context, userType: item.userType1, menuId: item.menuID);
           } else {
             // print("${userType!} helloooo Not ");
 
@@ -634,10 +633,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                                 name: subitem.subMenuName);
                           }
                         } else {
-                          onSelected(context,
-                              userType: subitem.userType1,
-                              menuId: item.menuID,
-                              subMenuId: subitem.subMenuID);
+                          // onSelected(context,
+                          //     userType: subitem.userType1,
+                          //     menuId: item.menuID,
+                          //     subMenuId: subitem.subMenuID);
                         }
 
                         // DrawerRouter.onSelected(context,

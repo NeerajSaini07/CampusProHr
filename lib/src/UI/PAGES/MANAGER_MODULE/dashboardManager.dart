@@ -14,7 +14,6 @@ import 'package:campus_pro/src/UI/PAGES/EMPLOYEE_MODULE/COMMUNICATION_EMPLOYEE/C
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/MEETING/meetingStatus.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/activity.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/notifications.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/MY_ACCOUNT_STUDENT/profileStudent.dart';
 import 'package:campus_pro/src/UI/WIDGETS/commonSnackbar.dart';
 import 'package:campus_pro/src/UI/WIDGETS/updateEmail.dart';
 import 'package:campus_pro/src/UTILS/appImages.dart';
@@ -1208,7 +1207,7 @@ class _DashboardManagerState extends State<DashboardManager> {
                           return BlocProvider<ProfileStudentCubit>(
                             create: (_) => ProfileStudentCubit(
                                 ProfileStudentRepository(ProfileStudentApi())),
-                            child: ProfileStudent(),
+                            // child: ProfileStudent(),
                           );
                         })),
                         //  Navigator.pushNamed(

@@ -12,7 +12,6 @@ import 'package:campus_pro/src/UI/PAGES/ADMIN_MODULE/STUDENT_ADMIN/admissionStat
 import 'package:campus_pro/src/UI/PAGES/ADMIN_MODULE/STUDENT_ADMIN/studentDetailAdmin.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/MEETING/meetingStatus.dart';
 import 'package:campus_pro/src/UI/PAGES/STAND_ALONE_PAGES/notifications.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/MY_ACCOUNT_STUDENT/profileStudent.dart';
 import 'package:campus_pro/src/UI/WIDGETS/CHARTS/barPieCommonChart.dart';
 import 'package:campus_pro/src/UI/WIDGETS/bottomNavigation.dart';
 import 'package:campus_pro/src/UTILS/appImages.dart';
@@ -757,13 +756,13 @@ class _DashboardAdminState extends State<DashboardAdmin> {
 
   navigateToPayment() {
     print("payment");
-   
+
     // Navigator.pushNamed(context, FeeCollectionAdmin.routeName);
   }
 
   navigateToCollection() {
     print("collection");
-   return Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return Navigator.push(context, MaterialPageRoute(builder: (context) {
       return BlocProvider<MainModeWiseFeeCubit>(
         create: (_) => MainModeWiseFeeCubit(
             MainModeWiseFeeRepository(MainModeWiseFeeApi())),
@@ -986,7 +985,7 @@ class _DashboardAdminState extends State<DashboardAdmin> {
                   return BlocProvider<ProfileStudentCubit>(
                     create: (_) => ProfileStudentCubit(
                         ProfileStudentRepository(ProfileStudentApi())),
-                    child: ProfileStudent(),
+                    // child: ProfileStudent(),
                   );
                 }));
                 // Navigator.pushNamed(context, ProfileStudent.routeName);

@@ -7,7 +7,6 @@ import 'package:campus_pro/src/DATA/BLOC_CUBIT/PAY_U_BIZ_HASH_CUBIT/pay_u_biz_ha
 import 'package:campus_pro/src/DATA/MODELS/PAYMENT_GATEWAY_MODELS/gatewayTypeModel.dart';
 import 'package:campus_pro/src/DATA/MODELS/studentInfoModel.dart';
 import 'package:campus_pro/src/DATA/userUtils.dart';
-import 'package:campus_pro/src/UI/PAGES/STUDENT_MODULE/feePaymentStudent.dart';
 import 'package:campus_pro/src/UI/WIDGETS/PAYMENT_GATEWAY/airPay.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
